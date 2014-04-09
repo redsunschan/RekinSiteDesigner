@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+		<activity
+			android:name="org.denalo.rshc.rekin.rsd.app.ConfigActivity"
+			android:label="Config">
+		</activity>
     </application>
 
 </manifest>

@@ -4,5 +4,10 @@
     <string name="app_name">Rekin Site Designer</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+	<string-array name="config_menu">
+		<item>Editor Setting</item>
+		<item>App Setting</item>
+		<item>About Us</item>
+		<item>Version</item>
+	</string-array>
 </resources>
