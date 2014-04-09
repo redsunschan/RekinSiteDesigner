@@ -23,7 +23,7 @@ public class MainActivity extends Activity
 							@Override
 							public void onClick ( View view )
 								{
-									System.exit ( 0 ) ;
+                                    showDialog();
 								}
 						} );
 			}
@@ -56,8 +56,29 @@ public class MainActivity extends Activity
 				return super.onOptionsItemSelected ( item );
 			}
 
-		public void showDialog ( )
-			{
+        @Override
+        public void onBackPressed() {
+            showDialog ( );
+        }
 
+        public void showDialog ( )
+			{
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage("Really Want To Quit?");
+                builder.setTitle("Confirm");
+                builder.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss ( );
+                        MainActivity.this.finish ( );
+                    }
+                });
+                builder.setNegativeButton ( "No", new AlertDialog.OnClickListener ( ) {
+                    @Override
+                    public void onClick ( DialogInterface dialog, int which ) {
+                        dialog.dismiss ( );
+                    }
+                });
+                builder.create ( ).show ( );
 			}
 	}

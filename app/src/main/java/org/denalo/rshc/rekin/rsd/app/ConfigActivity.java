@@ -27,10 +27,20 @@ public class ConfigActivity extends ListActivity
             new AdapterView.OnItemClickListener ( ) {
                 @Override
                 public void onItemClick ( AdapterView<?> parent, View view, int position, long id ) {
-                    Toast.makeText ( getApplicationContext ( ), String.valueOf ( id ), Toast.LENGTH_LONG).show();
-                	if ( id == 3 ) {
-						startActivity ( new Intent ( ConfigActivity.this , Version.class ) );
-					}
+                    switch ( ( int ) id ) {
+                        case 0:
+                            startActivity ( new Intent ( ConfigActivity.this , EditorConfigActivity.class ) );
+                            break;
+                        case 1:
+                            startActivity ( new Intent ( ConfigActivity.this , AppConfigActivity.class ) );
+                            break;
+                        case 2:
+                            startActivity ( new Intent ( ConfigActivity.this , AboutUs.class ) );
+                            break;
+                        case 3:
+                            startActivity ( new Intent ( ConfigActivity.this , Version.class ) );
+                            break;
+                    }
 				}
             });
         }

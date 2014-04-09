@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright (c) Denalo Entertainment Organization
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.denalo.rshc.rekin.rsd.app" >
 
@@ -12,22 +16,29 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-		<activity
-			android:name="org.denalo.rshc.rekin.rsd.app.ConfigActivity"
-			android:label="Config">
-		</activity>
-		<activity
-			android:name="org.denalo.rshc.rekin.rsd.app.Version"
-			android:label="Version">
-		</activity>
-		<activity
-			android:name="org.denalo.rshc.rekin.rsd.app.AboutUs"
-			android:label="About Us">
-		</activity>
+        <activity
+            android:name="org.denalo.rshc.rekin.rsd.app.ConfigActivity"
+            android:label="Config" >
+        </activity>
+        <activity
+            android:name="org.denalo.rshc.rekin.rsd.app.EditorConfigActivity"
+            android:label="Editor Setting" >
+        </activity>
+        <activity
+            android:name="org.denalo.rshc.rekin.rsd.app.AppConfigActivity"
+            android:label="Application Setting" >
+        </activity>
+        <activity
+            android:name="org.denalo.rshc.rekin.rsd.app.Version"
+            android:label="Version" >
+        </activity>
+        <activity
+            android:name="org.denalo.rshc.rekin.rsd.app.AboutUs"
+            android:label="About Us" >
+        </activity>
     </application>
 
 </manifest>

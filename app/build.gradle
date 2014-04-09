@@ -1,3 +1,7 @@
+/*******************************************************************************
+ * Copyright (c) Denalo Entertainment Organization
+ ******************************************************************************/
+
 apply plugin: 'android'
 
 android {
@@ -19,5 +23,6 @@ android {
 }
 
 dependencies {
+    compile 'com.android.support:support-v4:19.+'
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
