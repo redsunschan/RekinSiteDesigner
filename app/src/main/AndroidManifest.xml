@@ -20,6 +20,14 @@
 			android:name="org.denalo.rshc.rekin.rsd.app.ConfigActivity"
 			android:label="Config">
 		</activity>
+		<activity
+			android:name="org.denalo.rshc.rekin.rsd.app.Version"
+			android:label="Version">
+		</activity>
+		<activity
+			android:name="org.denalo.rshc.rekin.rsd.app.AboutUs"
+			android:label="About Us">
+		</activity>
     </application>
 
 </manifest>

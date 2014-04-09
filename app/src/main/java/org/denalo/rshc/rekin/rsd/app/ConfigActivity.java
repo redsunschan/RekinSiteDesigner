@@ -5,10 +5,10 @@
 package org.denalo.rshc.rekin.rsd.app;
 
 import android.app.*;
+import android.content.*;
 import android.os.*;
 import android.view.*;
 import android.widget.*;
-import java.util.*;
 
 public class ConfigActivity extends ListActivity
 {
@@ -27,8 +27,11 @@ public class ConfigActivity extends ListActivity
             new AdapterView.OnItemClickListener ( ) {
                 @Override
                 public void onItemClick ( AdapterView<?> parent, View view, int position, long id ) {
-                    Toast.makeText ( getApplicationContext ( ), ( ( TextView ) view ).getId ( ) , Toast.LENGTH_SHORT).show();
-                }
+                    Toast.makeText ( getApplicationContext ( ), String.valueOf ( id ), Toast.LENGTH_LONG).show();
+                	if ( id == 3 ) {
+						startActivity ( new Intent ( ConfigActivity.this , Version.class ) );
+					}
+				}
             });
         }
 	

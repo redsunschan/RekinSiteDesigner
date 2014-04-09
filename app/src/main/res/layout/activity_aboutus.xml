@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="Main Developer :"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="Redsuns S.H.Chan"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:gravity="center|center_vertical|center_horizontal"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text=
+"A Secondary School Student.\n\r
+Learning PHP , Java , C++ and Ruby.\n\r
+Recent Project : \n\r
+  Rekin PHP Site System ( R.P.S.S. )\n\r
+  Rekin Site Designer ( R.S.D. )"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="match_parent"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="Copyright :"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="Denalo Entertainment Organization"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:gravity="center|center_vertical|center_horizontal"/>
+
+</LinearLayout>
+
