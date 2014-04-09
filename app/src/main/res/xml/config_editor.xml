@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright (c) Denalo Entertainment Organization
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="font_setting"
+        android:title="Editor Font Setting">
+            <EditTextPreference
+                android:key="font_size"
+                android:title="Font Size"
+                android:summary="the size of editor's font"
+                android:inputType="number">
+            </EditTextPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="saving_setting"
+        android:title="File Saving Setting">
+            <EditTextPreference
+                android:key="encode_type"
+                android:title="File Default Encode Type"
+                android:summary="the default type of file encode ( Normal:UTF-8 )"
+                android:defaultValue="UTF-8">
+            </EditTextPreference>
+            <CheckBoxPreference
+                android:key="auto_save"
+                android:title="Auto Save File"
+                android:summary="auto save file?">
+            </CheckBoxPreference>
+            <EditTextPreference
+                android:key="auto_save_time"
+                android:title="Auto Save Time"
+                android:summary="auto save file after a few second"
+                android:inputType="number">
+            </EditTextPreference>
+
+    </PreferenceCategory>
+</PreferenceScreen>

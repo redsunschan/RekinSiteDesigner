@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright (c) Denalo Entertainment Organization
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="app_setting"
+        android:title="Editor Font Setting">
+            <EditTextPreference
+                android:key="theme_size"
+                android:title="Theme Size"
+                android:summary="the theme of this application"
+                android:defaultValue="@style/AppTheme">
+            </EditTextPreference>
+            <CheckBoxPreference
+                android:key="auto_send_error"
+                android:title="Auto Send Error?"
+                android:summary="Help us improve this application"
+                android:defaultValue="true">
+            </CheckBoxPreference>
+            <PreferenceScreen
+                android:key="project_copyright_setting"
+                android:title="Project Copyright Setting">
+                    <EditTextPreference
+                        android:key="author_name"
+                        android:title="Author Name"
+                        android:summary="Your Name">
+                    </EditTextPreference>
+                    <EditTextPreference
+                        android:key="Organization Name"
+                        android:title="Name of organization"
+                        android:summary="The name of your company or organization">
+                    </EditTextPreference>
+            </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>
