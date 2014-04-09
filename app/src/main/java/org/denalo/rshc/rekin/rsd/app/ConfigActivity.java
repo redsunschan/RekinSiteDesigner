@@ -1,3 +1,7 @@
+/*******************************************************************************
+ * Copyright (c) Denalo Entertainment Organization
+ ******************************************************************************/
+
 package org.denalo.rshc.rekin.rsd.app;
 
 import android.app.*;
@@ -19,11 +23,13 @@ public class ConfigActivity extends ListActivity
 		list = getListView ( );
 		item = getResources ( ).getStringArray ( R.array.config_menu );
 		list.setAdapter ( new ArrayAdapter<String> ( this , android.R.layout.simple_list_item_1 , item ) );
-	}
-	@Override
-	protected void onListItemClick ( ListView l, View v, int position, long id )
-		{
-			super.onListItemClick ( l, v, position, id );
-		}
+        list.setOnItemClickListener (
+            new AdapterView.OnItemClickListener ( ) {
+                @Override
+                public void onItemClick ( AdapterView<?> parent, View view, int position, long id ) {
+                    Toast.makeText ( getApplicationContext ( ), ( ( TextView ) view ).getId ( ) , Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
 	
 }
