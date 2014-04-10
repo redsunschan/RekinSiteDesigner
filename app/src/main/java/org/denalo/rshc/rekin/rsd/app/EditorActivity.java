@@ -1,6 +1,11 @@
+/*******************************************************************************
+ * Copyright (c) Denalo Entertainment Organization
+ ******************************************************************************/
+
 package org.denalo.rshc.rekin.rsd.app;
 import android.app.*;
 import android.os.*;
+import android.widget.EditText;
 
 public class EditorActivity extends Activity
 	{

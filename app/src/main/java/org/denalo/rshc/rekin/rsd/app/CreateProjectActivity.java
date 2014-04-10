@@ -1,3 +1,7 @@
+/*******************************************************************************
+ * Copyright (c) Denalo Entertainment Organization
+ ******************************************************************************/
+
 package org.denalo.rshc.rekin.rsd.app;
 import android.app.*;
 import android.os.*;
@@ -49,8 +53,14 @@ public class CreateProjectActivity extends Activity
 											if ( ! index_file.exists ( ) ) {
 												index_file.createNewFile ( );
 											}
-										} catch ( Exception exc ) { }
-									}
+                                            FileOutputStream fos = null;
+                                            openFileInput(Rekin.rootPath + projectName + "index.php");
+                                            BufferedOutputStream bos = new BufferedOutputStream(fos);
+                                            bos.write("<?php\n\r/**\n\r * Auto-Generate Index File\n\r */\n\r\n\r".getBytes());
+                                            bos.close();
+                                        } catch (Exception exc) {
+                                        }
+                                    }
 									if ( createFileTemplate ) {
 										File lib_dir = new File ( Rekin.rootPath+projectName+"library"+File.separator );
 										File res_dir = new File ( Rekin.rootPath+projectName+"resource"+File.separator );

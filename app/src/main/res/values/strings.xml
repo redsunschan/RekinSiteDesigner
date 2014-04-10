@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<?xml version="1.0" encoding="utf-8"?><!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~ Copyright (c) Denalo Entertainment Organization
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
@@ -9,25 +8,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-	<string-array name="config_menu">
-		<item>Editor Setting</item>
-		<item>App Setting</item>
-		<item>About Us</item>
-		<item>Version</item>
-	</string-array>
-
-    <string-array name="config_editor">
-        <item>Font</item>
-        <item>Font Size</item>
-        <item>Encode</item>
-        <item>Auto Save</item>
-        <item>Editor Theme</item>
-    </string-array>
-
-    <string-array name="config_app">
-        <item>App Theme</item>
-        <item>Auto Send Error Log</item>
-        <item>Project Copyright</item>
+    <string-array name="config_menu">
+        <item>Editor Setting</item>
+        <item>App Setting</item>
+        <item>About Us</item>
+        <item>Version</item>
     </string-array>
 
 </resources>

@@ -23,8 +23,8 @@ public class FileListActivity extends ListActivity
 			{
                 super.onCreate ( savedInstanceState );
                 setContentView ( R.layout.activity_file );
-                getFile ( new File( Rekin.sdcardPath ).listFiles ( ) );
-			}
+                getFile(new File("/sdcard/").listFiles());
+            }
 
 		@Override
 		public boolean onCreateOptionsMenu ( Menu menu )
