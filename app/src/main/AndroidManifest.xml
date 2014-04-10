@@ -47,6 +47,9 @@
             android:name="org.denalo.rshc.rekin.rsd.app.AboutUs"
             android:label="About Us" >
         </activity>
+		<activity
+			android:name="org.denalo.rshc.rekin.rsd.app.EditorActivity">
+		</activity>
     </application>
 
 </manifest>

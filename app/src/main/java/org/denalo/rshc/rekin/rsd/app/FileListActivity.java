@@ -23,7 +23,7 @@ public class FileListActivity extends ListActivity
 			{
                 super.onCreate ( savedInstanceState );
                 setContentView ( R.layout.activity_file );
-                getFile ( new File( "/sdcard/" ).listFiles ( ) );
+                getFile ( new File( Rekin.sdcardPath ).listFiles ( ) );
 			}
 
 		@Override
@@ -32,7 +32,7 @@ public class FileListActivity extends ListActivity
 				getMenuInflater ( ).inflate ( R.menu.file_list , menu );
 				return super.onCreateOptionsMenu ( menu );
 			}
-
+			
         private void getFile ( File[] files ) {
             items.clear ( );
             items.add ( "../ ( Parent Path )" );//Add Parent Path Item
@@ -43,10 +43,11 @@ public class FileListActivity extends ListActivity
                 }
 
                 if ( file.isDirectory ( ) ) {
-                    items.add ( file.getPath() );
+                    items.add ( file.getPath ( ).substring ( file.getParent().length() ) );
                 } else {
-                    items.add ( file.getName ( ) );
+					items.add ( file.getName ( ) );
                 }
+				setTitle ( file.getParent ( ) );
             }
 
             adapter = new ArrayAdapter<String>( this , android.R.layout.simple_list_item_1 , items );
