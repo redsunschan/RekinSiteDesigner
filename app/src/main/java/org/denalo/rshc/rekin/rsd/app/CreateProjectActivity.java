@@ -57,7 +57,7 @@ public class CreateProjectActivity extends Activity
                                                 }
                                                 if (index_file.canWrite()) {
                                                     FileOutputStream fos = new FileOutputStream(index_file);
-                                                    fos.write("test".getBytes());
+                                                    fos.write("<?php\n\r/**\n\r * Auto-Generate Index File By Rekin Site Designer\n\r */\n\r\n\r".getBytes());
                                                     fos.close();
                                                 }
                                             } catch (Exception exc) {
