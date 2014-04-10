@@ -19,6 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+		<activity
+            android:name="org.denalo.rshc.rekin.rsd.app.CreateProjectActivity"
+            android:label="Create New Project" >
+        </activity>
+		<activity
+            android:name="org.denalo.rshc.rekin.rsd.app.FileListActivity"
+            android:label="SD Card File List" >
+        </activity>
         <activity
             android:name="org.denalo.rshc.rekin.rsd.app.ConfigActivity"
             android:label="Config" >

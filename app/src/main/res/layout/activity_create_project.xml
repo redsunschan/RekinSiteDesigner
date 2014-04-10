@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="Project Name:"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"/>
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:ems="90"
+		android:layout_width="match_parent"
+		android:id="@+id/project_name"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="Need Folder Template?"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"/>
+
+	<CheckBox
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="Okay, Thanks."
+		android:id="@+id/create_folder_template"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="Create [index.php] ?"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"/>
+
+	<CheckBox
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/create_index_file"
+		android:text="Okay , Thanks."/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="Confirm"
+		android:layout_width="match_parent"
+		android:gravity="center|center_vertical|center_horizontal"
+		android:id="@+id/confirm_create"/>
+
+</LinearLayout>
+

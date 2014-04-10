@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/find_file"
+        android:title="Find File.."/>
+	<item android:id="@+id/new_file"
+		android:title="New File"/>
+	<item android:id="@+id/new_html"
+		android:title="New HTML File"/>
+	<item android:id="@+id/new_js"
+		android:title="New JavaScript File"/>
+	<item android:id="@+id/new_php"
+		android:title="New PHP File"/>
+</menu>

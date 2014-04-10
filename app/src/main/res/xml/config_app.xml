@@ -9,14 +9,14 @@
         android:key="app_setting"
         android:title="Editor Font Setting">
             <EditTextPreference
-                android:key="theme_size"
-                android:title="Theme Size"
+                android:key="app_theme"
+                android:title="Theme"
                 android:summary="the theme of this application"
                 android:defaultValue="@style/AppTheme">
             </EditTextPreference>
             <CheckBoxPreference
                 android:key="auto_send_error"
-                android:title="Auto Send Error?"
+                android:title="Auto Send Error"
                 android:summary="Help us improve this application"
                 android:defaultValue="true">
             </CheckBoxPreference>
@@ -25,12 +25,12 @@
                 android:title="Project Copyright Setting">
                     <EditTextPreference
                         android:key="author_name"
-                        android:title="Author Name"
+                        android:title="Author"
                         android:summary="Your Name">
                     </EditTextPreference>
                     <EditTextPreference
-                        android:key="Organization Name"
-                        android:title="Name of organization"
+                        android:key="org_name"
+                        android:title="Organization"
                         android:summary="The name of your company or organization">
                     </EditTextPreference>
             </PreferenceScreen>

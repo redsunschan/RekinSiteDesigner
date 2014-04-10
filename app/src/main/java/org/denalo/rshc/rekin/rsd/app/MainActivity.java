@@ -18,12 +18,28 @@ public class MainActivity extends Activity
 			{
 				super.onCreate ( savedInstanceState );
 				setContentView ( R.layout.activity_main );
+				Button new_project = ( Button ) findViewById ( R.id.new_project );
+				Button open_project = ( Button ) findViewById ( R.id.open_project );
 				Button quit = ( Button ) findViewById ( R.id.quit );
+				new_project.setOnClickListener ( new Button.OnClickListener ( ) {
+					@Override
+					public void onClick ( View view )
+						{
+							startActivity ( new Intent ( MainActivity.this , CreateProjectActivity.class ) );
+						}
+				} );
+				open_project.setOnClickListener ( new Button.OnClickListener ( ) {
+							@Override
+							public void onClick ( View view )
+								{
+									startActivity ( new Intent ( MainActivity.this , FileListActivity.class ) );
+								}
+						} );
 				quit.setOnClickListener ( new Button.OnClickListener ( ) {
 							@Override
 							public void onClick ( View view )
 								{
-                                    showDialog();
+                                    showDialog ( );
 								}
 						} );
 			}
@@ -46,8 +62,7 @@ public class MainActivity extends Activity
 				int id = item.getItemId ( );
 				if ( id == R.id.action_settings )
 					{
-						Intent setting = new Intent ( this , ConfigActivity.class );
-						startActivity ( setting );
+						startActivity ( new Intent ( this , ConfigActivity.class ) );
 					}
 				if ( id == R.id.action_aboutus )
 					{

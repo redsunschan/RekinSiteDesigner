@@ -22,13 +22,13 @@
         android:title="File Saving Setting">
             <EditTextPreference
                 android:key="encode_type"
-                android:title="File Default Encode Type"
+                android:title="File Encode Type"
                 android:summary="the default type of file encode ( Normal:UTF-8 )"
                 android:defaultValue="UTF-8">
             </EditTextPreference>
             <CheckBoxPreference
                 android:key="auto_save"
-                android:title="Auto Save File"
+                android:title="Auto Save"
                 android:summary="auto save file?">
             </CheckBoxPreference>
             <EditTextPreference

@@ -24,8 +24,8 @@
 "A Secondary School Student.\n\r
 Learning PHP , Java , C++ and Ruby.\n\r
 Recent Project : \n\r
-  Rekin PHP Site System ( R.P.S.S. )\n\r
-  Rekin Site Designer ( R.S.D. )"
+ -> Rekin PHP Site System ( R.P.S.S. )\n\r
+ -> Rekin Site Designer ( R.S.D. )"
 		android:textAppearance="?android:attr/textAppearanceSmall"
 		android:layout_width="match_parent"/>
 
