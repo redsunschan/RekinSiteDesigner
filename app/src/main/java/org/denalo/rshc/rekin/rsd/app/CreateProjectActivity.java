@@ -40,35 +40,44 @@ public class CreateProjectActivity extends Activity
 							public void onClick ( View view )
 								{
                                     if (project_name.getText() != null) {
-                                        projectName = project_name.getText ( ).toString ( )+File.separator;
-									createIndex = create_index.isChecked ( );
-									createFileTemplate = create_file_template.isChecked ( );
-									project_dir = new File ( Rekin.rootPath+projectName );
-									if ( !project_dir.exists ( ) ) {
-										project_dir.mkdirs ( );
-										new Toast ( getApplicationContext ( ) ).makeText ( getApplicationContext() , "Created Project Dir : "+projectName , Toast.LENGTH_SHORT ).show ( );
-									}
-									if ( createIndex ) {
-										try {
-											File index_file = new File ( Rekin.rootPath+projectName+"index.php" );
-											if ( ! index_file.exists ( ) ) {
-												index_file.createNewFile ( );
-											}
-                                            FileOutputStream fos = openFileOutput(Rekin.rootPath + projectName + "index.php", MODE_PRIVATE);
-                                            BufferedOutputStream bos = new BufferedOutputStream(fos);
-                                            bos.write("<?php\n\r/**\n\r * Auto-Generate Index File\n\r */\n\r\n\r".getBytes());
-                                            bos.close();
-                                        } catch (Exception exc) {
+                                        projectName = project_name.getText().toString() + File.separator;
+                                        createIndex = create_index.isChecked();
+                                        createFileTemplate = create_file_template.isChecked();
+                                        project_dir = new File(Rekin.rootPath + projectName);
+                                        if (!project_dir.exists()) {
+                                            project_dir.mkdirs();
+                                            new Toast(getApplicationContext()).makeText(getApplicationContext(), "Created Project Dir : " + projectName, Toast.LENGTH_SHORT).show();
                                         }
-                                    }
-									if ( createFileTemplate ) {
-										File lib_dir = new File ( Rekin.rootPath+projectName+"library"+File.separator );
-										File res_dir = new File ( Rekin.rootPath+projectName+"resource"+File.separator );
-										File mod_dir = new File ( Rekin.rootPath+projectName+"module"+File.separator );
-										lib_dir.mkdir ( );
-										res_dir.mkdir ( );
-										mod_dir.mkdir ( );
-									}
+                                        if (createIndex) {
+                                            try {
+                                                File index_file = new File(Rekin.rootPath + projectName + "index.php");
+                                                if (!index_file.exists()) {
+                                                    index_file.createNewFile();
+                                                    index_file.setWritable(true);
+                                                }
+                                                if (index_file.canWrite()) {
+                                                    FileOutputStream fos = new FileOutputStream(index_file);
+                                                    fos.write("test".getBytes());
+                                                    fos.close();
+                                                }
+                                            } catch (Exception exc) {
+                                                exc.printStackTrace();
+                                            }
+                                        }
+                                        if (createFileTemplate) {
+                                            File lib_dir = new File(Rekin.rootPath + projectName + "library" + File.separator);
+                                            File res_dir = new File(Rekin.rootPath + projectName + "resource" + File.separator);
+                                            File mod_dir = new File(Rekin.rootPath + projectName + "module" + File.separator);
+                                            if (!lib_dir.exists()) {
+                                                lib_dir.mkdirs();
+                                            }
+                                            if (!res_dir.exists()) {
+                                                res_dir.mkdirs();
+                                            }
+                                            if (!mod_dir.exists()) {
+                                                mod_dir.mkdirs();
+                                            }
+                                        }
                                     } else {
                                         finish();
                                     }
