@@ -39,7 +39,8 @@ public class CreateProjectActivity extends Activity
 							@Override
 							public void onClick ( View view )
 								{
-									projectName = project_name.getText ( ).toString ( )+File.separator;
+                                    if (project_name.getText() != null) {
+                                        projectName = project_name.getText ( ).toString ( )+File.separator;
 									createIndex = create_index.isChecked ( );
 									createFileTemplate = create_file_template.isChecked ( );
 									project_dir = new File ( Rekin.rootPath+projectName );
@@ -53,8 +54,7 @@ public class CreateProjectActivity extends Activity
 											if ( ! index_file.exists ( ) ) {
 												index_file.createNewFile ( );
 											}
-                                            FileOutputStream fos = null;
-                                            openFileInput(Rekin.rootPath + projectName + "index.php");
+                                            FileOutputStream fos = openFileOutput(Rekin.rootPath + projectName + "index.php", MODE_PRIVATE);
                                             BufferedOutputStream bos = new BufferedOutputStream(fos);
                                             bos.write("<?php\n\r/**\n\r * Auto-Generate Index File\n\r */\n\r\n\r".getBytes());
                                             bos.close();
@@ -69,7 +69,10 @@ public class CreateProjectActivity extends Activity
 										res_dir.mkdir ( );
 										mod_dir.mkdir ( );
 									}
-								}
+                                    } else {
+                                        finish();
+                                    }
+                                }
 
 							
 						} );
