@@ -9,6 +9,7 @@ import android.content.*;
 import android.os.*;
 import android.view.*;
 import android.widget.*;
+import org.denalo.rshc.rekin.rsd.app.config.*;
 
 public class ConfigActivity extends ListActivity
 {
@@ -35,10 +36,10 @@ public class ConfigActivity extends ListActivity
                             startActivity ( new Intent ( ConfigActivity.this , AppConfigActivity.class ) );
                             break;
                         case 2:
-                            startActivity ( new Intent ( ConfigActivity.this , AboutUs.class ) );
+                            startActivity ( new Intent ( ConfigActivity.this , AboutUsActivity.class ) );
                             break;
                         case 3:
-                            startActivity ( new Intent ( ConfigActivity.this , Version.class ) );
+                            startActivity ( new Intent ( ConfigActivity.this , VersionActivity.class ) );
                             break;
                     }
 				}

@@ -3,7 +3,7 @@ package org.denalo.rshc.rekin.rsd.app;
 import android.app.*;
 import android.os.*;
 
-public class AboutUs extends Activity
+public class AboutUsActivity extends Activity
 	{
 
 		@Override

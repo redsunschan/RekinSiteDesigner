@@ -66,7 +66,7 @@ public class MainActivity extends Activity
 					}
 				if ( id == R.id.action_aboutus )
 					{
-						startActivity ( new Intent ( this , AboutUs.class ) );
+						startActivity ( new Intent ( this , AboutUsActivity.class ) );
 					}
 				return super.onOptionsItemSelected ( item );
 			}

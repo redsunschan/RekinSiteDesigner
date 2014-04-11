@@ -1,4 +1,4 @@
-package org.denalo.rshc.rekin.rsd.app;
+package org.denalo.rshc.rekin.rsd.app.frame;
 import android.os.*;
 import java.io.*;
 

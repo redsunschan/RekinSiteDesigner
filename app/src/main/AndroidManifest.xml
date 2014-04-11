@@ -32,19 +32,19 @@
             android:label="Config" >
         </activity>
         <activity
-            android:name="org.denalo.rshc.rekin.rsd.app.EditorConfigActivity"
+            android:name="org.denalo.rshc.rekin.rsd.app.config.EditorConfigActivity"
             android:label="Editor Setting" >
         </activity>
         <activity
-            android:name="org.denalo.rshc.rekin.rsd.app.AppConfigActivity"
+            android:name="org.denalo.rshc.rekin.rsd.app.config.AppConfigActivity"
             android:label="Application Setting" >
         </activity>
         <activity
-            android:name="org.denalo.rshc.rekin.rsd.app.Version"
+            android:name="org.denalo.rshc.rekin.rsd.app.VersionActivity"
             android:label="Version" >
         </activity>
         <activity
-            android:name="org.denalo.rshc.rekin.rsd.app.AboutUs"
+            android:name="org.denalo.rshc.rekin.rsd.app.AboutUsActivity"
             android:label="About Us" >
         </activity>
 		<activity

@@ -2,10 +2,11 @@
  * Copyright (c) Denalo Entertainment Organization
  ******************************************************************************/
 
-package org.denalo.rshc.rekin.rsd.app;
+package org.denalo.rshc.rekin.rsd.app.config;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import org.denalo.rshc.rekin.rsd.app.*;
 
 public class EditorConfigActivity extends PreferenceActivity {
 
