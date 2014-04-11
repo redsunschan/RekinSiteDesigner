@@ -10,6 +10,8 @@ import android.os.*;
 import android.view.*;
 import android.widget.*;
 
+import org.denalo.rshc.rekin.rsd.app.frame.alert.ExitAlert;
+
 public class MainActivity extends Activity
 	{
 
@@ -39,8 +41,8 @@ public class MainActivity extends Activity
 							@Override
 							public void onClick ( View view )
 								{
-                                    showDialog ( );
-								}
+                                    new ExitAlert(MainActivity.this).create();
+                                }
 						} );
 			}
 
@@ -73,27 +75,8 @@ public class MainActivity extends Activity
 
         @Override
         public void onBackPressed() {
-            showDialog ( );
+            new ExitAlert(this).create();
         }
 
-        public void showDialog ( )
-			{
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setMessage("Really Want To Quit?");
-                builder.setTitle("Confirm");
-                builder.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss ( );
-                        MainActivity.this.finish ( );
-                    }
-                });
-                builder.setNegativeButton ( "No", new AlertDialog.OnClickListener ( ) {
-                    @Override
-                    public void onClick ( DialogInterface dialog, int which ) {
-                        dialog.dismiss ( );
-                    }
-                });
-                builder.create ( ).show ( );
-			}
-	}
+
+    }
