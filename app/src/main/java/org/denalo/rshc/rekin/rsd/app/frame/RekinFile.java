@@ -19,7 +19,7 @@ public class RekinFile
 							}
 					}
 			}
-
+			
 		public static void createDir ( String path )
 			{
 				File file = new File ( path );
@@ -29,10 +29,19 @@ public class RekinFile
 					}
 			}
 
-		public static void createTemp (  String filename , String name ) {
-			File file = new File ( filename );
-		}
-			
+		public static void createTemp (  String filename , String name )
+			{
+				File file = new File ( filename );
+				try
+					{
+						file.createTempFile ( "RSDTemp_" , "rtf" );
+					}
+				catch (IOException exc)
+					{
+						exc.printStackTrace ( );
+					}
+			}
+
 		public static void write ( String filePath , String msg )
 			{
 
@@ -55,29 +64,60 @@ public class RekinFile
 					}
 
 			}
-		
-		public static void deletePath ( String path ) {
+
+		public static void deletePath ( String path )
+			{
+				File file = new File ( path );
+				if ( file.exists ( ) )
+					{
+						file.delete ( );
+					}
+			}
+
+		public static void deleteFile ( String path , String name )
+			{
+				File file = new File ( path + File.separator + name );
+				if ( file.exists ( ) )
+					{
+						file.delete ( );
+					}
+			}
+
+		public static void rename ( String old_path , String new_path )
+			{
+				File file = new File ( old_path );
+				if ( file.exists ( ) )
+					{
+						file.renameTo ( new File ( new_path ) );
+						if ( file.getName ( ) != new_path )
+							{
+								new IOException ( ).printStackTrace ( );
+							}
+					}
+			}
+
+		public static File getFile ( String path , String name ) {
+			return new File ( path );
+		}
+
+		public static File[] getSpecificTypeFile ( String path , String type ) {
+			File[] files = null;
 			File file = new File ( path );
-			if ( file.exists ( ) ) {
-				file.delete ( );
-			}
+			FileFilter filter = null;
+			files = file.listFiles ( filter );
+			return files;
 		}
 		
-		public static void deleteFile ( String path , String name ) {
-			File file = new File ( path+File.separator+name );
-			if ( file.exists ( ) ) {
-				file.delete ( );
-			}
+		public static File getDir ( String path ) {
+			return new File ( path );
 		}
 		
-		public static void rename ( String old_path , String new_path ) {
-			File file = new File ( old_path );
-			if ( file.exists ( ) ) {
-				file.renameTo ( new File ( new_path ) );
-				if ( file.getName ( ) != new_path ) {
-					new IOException ( ).printStackTrace ( );
-				}
-			}
+		public static String getFileName ( String path ) {
+			return new File ( path ).getName ( );
+		}
+		
+		public static String getDirName ( String path ) {
+			return new File ( path ).getName ( );
 		}
 		
 	}
