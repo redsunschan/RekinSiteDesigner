@@ -73,7 +73,11 @@ public class FileListActivity extends ListActivity
                 }
 
                 if ( file.isDirectory ( ) ) {
-                    items.add ( file.getPath ( ).substring ( file.getParent().length() ) );
+                    if (file.getParent().length() > 1) {
+                        items.add(file.getPath().substring(file.getParent().length()));
+                    } else {
+                        items.add(file.getPath());
+                    }
                 } else {
 					items.add ( file.getName ( ) );
                 }
