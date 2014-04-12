@@ -87,7 +87,10 @@ public class FileListActivity extends ListActivity
                 }
 				setTitle ( file.getParent ( ) );
             }
-
+            if (items.isEmpty()) {
+                items.add("../");
+                items.add("No File Found.");
+            }
             adapter = new ArrayAdapter<String>( this , android.R.layout.simple_list_item_1 , items );
             this.setListAdapter ( adapter );
         }
