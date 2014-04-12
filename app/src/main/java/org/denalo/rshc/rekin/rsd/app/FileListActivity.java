@@ -33,6 +33,15 @@ public class FileListActivity extends ListActivity
 				return super.onCreateOptionsMenu ( menu );
 			}
 
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            int id = item.getItemId();
+            switch (id) {
+
+            }
+            return super.onOptionsItemSelected(item);
+        }
+
         protected void onListItemClick(ListView listView, View view, int position, long id) {
             File file = (File) listView.getAdapter().getItem(position);
             if (file.isDirectory()) {
