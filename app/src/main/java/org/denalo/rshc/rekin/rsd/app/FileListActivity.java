@@ -65,9 +65,12 @@ public class FileListActivity extends ListActivity
 
         private void getFile ( File[] files ) {
             items.clear ( );
+
             for ( File file : files ) {
-                if (file.getName() != "/") {
-                    items.add("../");//Add Parent Path Item
+                if (file.getParent() != "/") {
+                    if (!items.contains("../")) {
+                        items.add("../");
+                    }
                 }
                 if ( file.getParentFile ( ) != null && file.getParentFile ( ).getParent ( ) != null ) {
                     parentPath = file.getParentFile().getParent();
