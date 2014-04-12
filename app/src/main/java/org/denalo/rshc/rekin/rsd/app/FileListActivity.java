@@ -47,7 +47,7 @@ public class FileListActivity extends ListActivity
             String selectedFile = this.items.get(position);
             new Toast(getApplicationContext()).makeText(getApplicationContext(), selectedFile, Toast.LENGTH_LONG);
             if (selectedFile == "../") {
-                getFile(getFilesDir().getParentFile().listFiles());
+                getFile(new File(this.getTitle().toString()).listFiles());
             } else {
                 File file = new File(this.getTitle() + selectedFile);
                 getFile(file.listFiles());
