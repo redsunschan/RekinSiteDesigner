@@ -38,7 +38,14 @@ public class FileListActivity extends ListActivity
         public boolean onOptionsItemSelected(MenuItem item) {
             int id = item.getItemId();
             switch (id) {
-
+                case R.id.new_file:
+                    break;
+                case R.id.new_html:
+                    break;
+                case R.id.new_js:
+                    break;
+                case R.id.new_php:
+                    break;
             }
             return super.onOptionsItemSelected(item);
         }

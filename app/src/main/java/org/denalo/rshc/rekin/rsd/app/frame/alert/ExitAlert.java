@@ -9,9 +9,6 @@ import android.content.DialogInterface;
 
 import org.denalo.rshc.rekin.rsd.app.frame.RekinAlert;
 
-/**
- * Created by powaic on 11/4/2014.
- */
 public class ExitAlert extends RekinAlert {
     public ExitAlert(final Activity activity) {
         super(activity, "Confirm Exit", "Are you sure to exit?", "Confirm", "Cancel");
