@@ -50,7 +50,14 @@ public class FileListActivity extends ListActivity
                 getFile(new File(this.getTitle().toString()).getParentFile().listFiles());
             } else {
                 File file = new File(this.getTitle() + selectedFile);
-                getFile(file.listFiles());
+                if (file.isDirectory()) {
+                    getFile(file.listFiles());
+                }
+                if (file.isFile()) {
+                    getIntent().putExtra("path", file.getPath());
+                    setResult(RESULT_OK, getIntent());
+                    finish();
+                }
             }
         }
 
