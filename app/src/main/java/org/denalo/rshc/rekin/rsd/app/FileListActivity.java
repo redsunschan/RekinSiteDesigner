@@ -4,6 +4,7 @@
 
 package org.denalo.rshc.rekin.rsd.app;
 import android.app.*;
+import android.content.Intent;
 import android.os.*;
 import android.view.*;
 import android.widget.*;
@@ -44,6 +45,7 @@ public class FileListActivity extends ListActivity
 
         protected void onListItemClick(ListView listView, View view, int position, long id) {
             super.onListItemClick(listView, view, position, id);
+            Intent it = new Intent(Intent.ACTION_VIEW);
             String selectedFile = this.items.get(position);
             new Toast(getApplicationContext()).makeText(getApplicationContext(), selectedFile, Toast.LENGTH_LONG);
             if (selectedFile == "../") {
@@ -54,7 +56,7 @@ public class FileListActivity extends ListActivity
                     getFile(file.listFiles());
                 }
                 if (file.isFile()) {
-                    getIntent().putExtra("path", file.getPath());
+                    it.putExtra("path", file.getPath());
                     setResult(RESULT_OK, getIntent());
                     finish();
                 }
