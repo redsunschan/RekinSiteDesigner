@@ -32,7 +32,14 @@ public class FileListActivity extends ListActivity
 				getMenuInflater ( ).inflate ( R.menu.file_list , menu );
 				return super.onCreateOptionsMenu ( menu );
 			}
-			
+
+        protected void onListItemClick(ListView listView, View view, int position, long id) {
+            File file = (File) listView.getAdapter().getItem(position);
+            if (file.isDirectory()) {
+                getFile(file.listFiles());
+            }
+        }
+
         private void getFile ( File[] files ) {
             items.clear ( );
             items.add ( "../ ( Parent Path )" );//Add Parent Path Item
