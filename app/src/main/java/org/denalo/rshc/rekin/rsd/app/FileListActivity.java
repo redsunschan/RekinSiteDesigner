@@ -44,7 +44,7 @@ public class FileListActivity extends ListActivity
 
         protected void onListItemClick(ListView listView, View view, int position, long id) {
             super.onListItemClick(listView, view, position, id);
-            String selectedFile = this.items.get((int) id);
+            String selectedFile = this.items.get(position);
             new Toast(getApplicationContext()).makeText(getApplicationContext(), selectedFile, Toast.LENGTH_LONG);
         }
 
