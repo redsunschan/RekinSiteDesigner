@@ -43,10 +43,9 @@ public class FileListActivity extends ListActivity
         }
 
         protected void onListItemClick(ListView listView, View view, int position, long id) {
-            File file = (File) listView.getAdapter().getItem(position);
-            if (file.isDirectory()) {
-                getFile(file.listFiles());
-            }
+            super.onListItemClick(listView, view, position, id);
+            String selectedFile = this.items.get((int) id);
+            new Toast(getApplicationContext()).makeText(getApplicationContext(), selectedFile, Toast.LENGTH_LONG);
         }
 
         private void getFile ( File[] files ) {
